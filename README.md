@@ -9,7 +9,7 @@ It was my aim to train language models on consumer hardware to reproduce the idi
 ### Real Data
 
 I started out collecting real data using the Reddit pushshift dataset, particularly the screenshots posted on `/r/wholesomegreentexts`. Therefore, I collected all available greentexts, transcribed them using `Pytesseract` for optical character recognition and then put in some time for manual data curation.
-This was done with a scrappy local service. You can start the backend of the QA app with `python app.py` and the frontend with `npm run dev` in the `flask_backend` and `frontend` folders inside the `QA App Folder`.
+This was done with a scrappy local service. You can start the backend of the QA app with `python app.py` and the frontend with `npm run dev` in the `flask_backend` and `frontend` folders inside the `QA App Folder`. You also need to install the requirements `pip install -r requirements.txt` for the backend and `npm install` for the frontend.
 
 ### Synthetic Data
 
@@ -30,3 +30,5 @@ Training was done on Kaggle and Google Colab. I found that the data was most eff
 What also worked really well was to train a custom `<|4chanGtxStart|>` token sequence. It improved both, the `TinyStories` and GPT-2 perfomances. However, it proved very useful in the latter to disassociate the `>` token from code generation.
 
 You can play around with the model performance yourself on [wholesomegreentext.lol](wholesomegreentext.lol).
+
+The code for the frontend is [here](github.com/maxmynter/wholesomeGreenTextFront)
