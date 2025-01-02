@@ -8,7 +8,7 @@ CORS(app)
 
 DB = "db.json"
 
-IMAGE_DIR = '/Users/maxmynter/Desktop/projects/wholesomegreentextLLM/data/images'
+IMAGE_DIR = '../../images/'
 
 
 def load_json(filename):
