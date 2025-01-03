@@ -1,20 +1,44 @@
-# Quality assurance app
+# Quality Assurance App
 
-This is a (very scrappy) app for quality control of greentext extraction from posts on the `/r/wholesomegreentext` subreddit.
+A lightweight web application for quality control of greentext extractions from r/wholesomegreentext subreddit posts. Built with React and Flask.
 
-To start the frontend navigate into the `frontend` directory on a terminal and run:
+## Quick Start
 
+### Frontend Setup
 ```bash
-npm run dev
+cd frontend
+npm install  # Install dependencies
+npm run dev  # Start development server
 ```
 
-For the backend, navigate into the `flask_backend` directory and run 
-
+### Backend Setup
 ```bash
-python app.py
+cd flask_backend
+pip install -r requirements.txt  # Install dependencies
+python app.py  # Start Flask server
 ```
 
-Note: You must execute this from the directory indicated above for the filepaths to work out. Of course, you could program this in a more robust way, but this was a very quick and dirty solution to a task at hand, so i did not.
+⚠️ **Important**: The backend must be started from the `flask_backend` directory due to relative filepath dependencies.
 
+## Sample Data
+The repository includes example data to demonstrate the workflow:
+- Two sample images in `data/collected/images/`
+- Corresponding transcriptions in `db.json`
 
-I have committed two images in the `data/collected/images` directory and their transcription in the `db.json` so you get an idea how the process worked.
+## Directory Structure
+```
+QA_app/
+├── README.md           # This file
+├── flask_backend/      # Python/Flask backend
+│   ├── app.py          # Server entry point
+│   └── requirements.txt
+├── frontend/           # React frontend
+│   ├── package.json
+│   └── src/
+└── db.json             # Sample transcription data
+```
+
+## Technical Notes
+- This is a prototype-quality tool built for rapid data curation
+- Paths are hardcoded for quick development
+- See main project README for context about the data collection pipeline
